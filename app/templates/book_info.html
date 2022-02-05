@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ book.book_name }}</title>
+</head>
+<body>
+<a href="/">首页</a>
+<div id="description">
+    <h1>{{ book.book_name }}</h1><br>
+    <p>{{ book.description }}</p>
+
+</div>
+<div id="page_list">
+    <h2>Pages</h2>
+    <ul>
+
+        {% for page in pages%}
+            <li>
+                <a href="/book/{{ book.book_id }}/page/{{ page }}">{{ page}}</a><br>
+
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>

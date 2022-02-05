@@ -5,14 +5,21 @@
     <title>Title</title>
 </head>
 <body>
+<div id="top">
+    {% if page > 1%}
+        <a href="/page/{{ page - 1 }}">上一页</a>
+    {% endif %}
+
+    <a href="/page/1">首页</a>
+
+    {% if page < total_book_page%}
+        <a href="/page/{{ page + 1 }}">下一页</a>
+    {% endif %}
+
+</div>
 <div id="book_list">
     {% for book in books %}
-        <div class="book">
-            <h2>{{ book.book_name }}</h2>
-            <p>{{ book.description }}</p>
-            <a href="/book/{{ book.book_id }}">{{ book.book_name }}</a>
-        </div>
-
+            <a href="/book/{{ book.book_id }}">{{ book.book_name }}</a><br>
     {% endfor %}
 
 </div>
