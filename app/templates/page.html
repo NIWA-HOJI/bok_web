@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ content.page_number }}</title>
+</head>
+<body>
+<div id="top">
+    {% if content.page_number > 1 %}
+        <a href="/book/{{ content.book_id }}/page/{{ content.page_number - 1 }}">上一页</a>
+    {% endif %}
+    <a href="/book/{{ content.book_id }}/">首页</a>
+    {% if content.page_number < page_count %}
+        <a href="/book/{{ content.book_id }}/page/{{ content.page_number + 1 }}">下一页</a>
+    {% endif %}
+</div>
+<br>
+<div id="content">
+    {{ content.content }}>
+</div>
+</body>
+</html>
