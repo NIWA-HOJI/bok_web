@@ -3,7 +3,7 @@ class Config(object):
     MYSQL_HOST = "localhost"
     MYSQL_USER = "root"
     MYSQL_PASSWORD = "dybq19940419"
-    MYSQL_DB = "flask_blog"
+    MYSQL_DB = "flask_web"
     MYSQL_PORT = 3306
 
     SQLALCHEMY_DATABASE_URI = (
