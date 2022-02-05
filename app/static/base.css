@@ -1,0 +1,16 @@
+body {
+    font-family: sans-serif;
+}
+
+#top {
+    background-color: #eee;
+    padding: 10px;
+    text-align: center
+
+}
+
+#book_list {
+    background-color: #ccc;
+    padding: 10px;
+    text-align: center
+}
