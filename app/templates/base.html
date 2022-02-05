@@ -5,6 +5,16 @@
     <title>Title</title>
 </head>
 <body>
+<div id="book_list">
+    {% for book in books %}
+        <div class="book">
+            <h2>{{ book.book_name }}</h2>
+            <p>{{ book.description }}</p>
+            <a href="/book/{{ book.book_id }}">{{ book.book_name }}</a>
+        </div>
 
+    {% endfor %}
+
+</div>
 </body>
 </html>
