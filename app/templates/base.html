@@ -1,27 +1,26 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-<link href="../static/base.css" rel="stylesheet" type="text/css"/>
+    <link href="static/base.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top">
-    {% if page > 1%}
+    {% if page > 1 %}
         <a href="/page/{{ page - 1 }}">上一页</a>
     {% endif %}
 
     <a href="/page/1">首页</a>
 
-    {% if page < total_book_page%}
+    {% if page < total_book_page %}
         <a href="/page/{{ page + 1 }}">下一页</a>
     {% endif %}
 
 </div>
 <div id="book_list">
     {% for book in books %}
-            <a href="/book/{{ book.book_id }}">{{ book.book_name }}</a><br>
+        <a href="/book/{{ book.book_id }}">{{ book.book_name }}</a><br>
     {% endfor %}
 
 </div>
