@@ -1,6 +1,6 @@
 class Config(object):
 
-    MYSQL_HOST = "101.43.115.188"
+    MYSQL_HOST = "localhost"
     MYSQL_USER = "root"
     MYSQL_PASSWORD = "dybq19940419"
     MYSQL_DB = "flask_blog"
