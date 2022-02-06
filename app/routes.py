@@ -46,3 +46,8 @@ def login():
     #     login_user(user, remember=form.remember_me.data)
     #     return redirect(url_for('index'))
     # return render_template('login.html', title='Sign In', form=form)
+@app.route('/search')
+def search():
+    keyword=request.args.get('keyword')
+    books=BookInfo.query.filter(BookInfo.title.like('%'+keyword+'%')).all()
+    return render_template('search.html',books=books)

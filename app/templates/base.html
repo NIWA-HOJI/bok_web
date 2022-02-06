@@ -24,5 +24,13 @@
     {% endfor %}
 
 </div>
+<div id="search">
+    <form action="/search">
+        <label>
+            <input type="text" name="keyword" value="{{ keyword }}">
+        </label>
+        <input type="submit" value="搜索">
+    </form>
+</div>
 </body>
 </html>
